@@ -5,8 +5,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time Tracker</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- HTML Goes here! -->
+    <main id="main-container">
+      <div class="info">
+        <img src="images/image-amutha.png" alt="Amutha's Image" />
+        <div id="person-name">
+          <p id="heading">Report for</p>
+          <p id="name">
+            Amuthaselvi <br />
+            Raja
+          </p>
+        </div>
+      </div>
+      <div class="period">
+        <p id="daily" class="duration" onclick="loadReport('daily')">Daily</p>
+        <p id="weekly" class="duration" onclick="loadReport('weekly')">
+          Weekly
+        </p>
+        <p id="monthly" class="duration" onclick="loadReport('monthly')">
+          Monthly
+        </p>
+      </div>
+      <div id="work-design" class="icon">
+        <img src="images/icon-work.svg" alt="Image of a breifcase" />
+      </div>
+      <div id="work-details" class="details">
+        <div class="title-box">
+          <p class="title">Work</p>
+          <img src="images/icon-ellipsis.svg" alt="Image of three-points" />
+        </div>
+        <p class="calculated-time">32hrs</p>
+        <p class="calculated-prev-time">Last Week - 36hrs</p>
+      </div>
+      <div id="exercise-design" class="icon">
+        <img src="images/icon-exercise.svg" alt="Image of a running icon" />
+      </div>
+      <div id="exercise-details" class="details">
+        <div class="title-box">
+          <p class="title">Exercise</p>
+          <img src="images/icon-ellipsis.svg" alt="Image of three-points" />
+        </div>
+        <p class="calculated-time">32hrs</p>
+        <p class="calculated-prev-time">Last Week - 36hrs</p>
+      </div>
+      <div id="play-design" class="icon">
+        <img src="images/icon-play.svg" alt="Image of a running icon" />
+      </div>
+      <div id="play-details" class="details">
+        <div class="title-box">
+          <p class="title">Play</p>
+          <img src="images/icon-ellipsis.svg" alt="Image of three-points" />
+        </div>
+        <p class="calculated-time">32hrs</p>
+        <p class="calculated-prev-time">Last Week - 36hrs</p>
+      </div>
+      <div id="social-design" class="icon">
+        <img src="images/icon-social.svg" alt="Image of a chat icon" />
+      </div>
+      <div id="social-details" class="details">
+        <div class="title-box">
+          <p class="title">Social</p>
+          <img src="images/icon-ellipsis.svg" alt="Image of three-points" />
+        </div>
+        <p class="calculated-time">32hrs</p>
+        <p class="calculated-prev-time">Last Week - 36hrs</p>
+      </div>
+      <div id="study-design" class="icon">
+        <img src="images/icon-study.svg" alt="Image of a book icon" />
+      </div>
+      <div id="study-details" class="details">
+        <div class="title-box">
+          <p class="title">Study</p>
+          <img src="images/icon-ellipsis.svg" alt="Image of three-points" />
+        </div>
+        <p class="calculated-time">32hrs</p>
+        <p class="calculated-prev-time">Last Week - 36hrs</p>
+      </div>
+      <div id="selfcare-design" class="icon">
+        <img
+          src="images/icon-self-care.svg"
+          alt="Image of a health heart icon"
+        />
+      </div>
+      <div id="selfcare-details" class="details">
+        <div class="title-box">
+          <p class="title">Self Care</p>
+          <img src="images/icon-ellipsis.svg" alt="Image of three-points" />
+        </div>
+        <p class="calculated-time">32hrs</p>
+        <p class="calculated-prev-time">Last Week - 36hrs</p>
+      </div>
+    </main>
   </body>
 </html>

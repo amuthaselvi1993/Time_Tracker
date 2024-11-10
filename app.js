@@ -36,3 +36,42 @@ const activities = [
     monthly: { current: 7, previous: 11 },
   },
 ];
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadReport("daily"); // Call your function here
+});
+
+function loadReport(reportPeriod) {
+  const removeHighlight = document.querySelectorAll(".period p");
+  console.log(removeHighlight);
+  removeHighlight.forEach((duration) => {
+    duration.classList.remove("selected");
+  });
+  const hightlight = document.querySelector(`#${reportPeriod}`);
+  {
+    hightlight.classList.add("selected");
+  }
+  activities.forEach((activity) => {
+    const activityTile = document.getElementById(
+      `${activity.title.toLowerCase().replace(/\s+/g, "")}-details`
+    );
+    const currentData = activityTile.querySelector(`.calculated-time`);
+    currentData.textContent = `${activity[reportPeriod].current}hrs`;
+    const prevData = activityTile.querySelector(`.calculated-prev-time`);
+    console.log(activity[reportPeriod]);
+    switch (reportPeriod) {
+      case "daily": {
+        prevData.textContent = `Yesterday - ${activity[reportPeriod].previous}hrs`;
+        break;
+      }
+      case "weekly": {
+        prevData.textContent = `Last Week - ${activity[reportPeriod].previous}hrs`;
+        break;
+      }
+      case "monthly": {
+        prevData.textContent = `Last Month - ${activity[reportPeriod].previous}hrs`;
+        break;
+      }
+    }
+  });
+}
